@@ -6,7 +6,7 @@
 	Company	:	***********
 	code	:	Verilog-2001
 ************************/
-module #(parameter CARRY = 2]shift(
+module shift #(parameter CARRY = 2)(
 input 	  [3:0] iData,
 output reg [3:0] oLeftShift,oRightShift);
 always @(iData)

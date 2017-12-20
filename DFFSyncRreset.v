@@ -6,7 +6,7 @@
 	Company	:	***********
 	code	:	Verilog-2001
 ************************/
-module #(parameter DELAY = 1) DFFSyncRreset(
+module DFFSyncRreset #(parameter DELAY = 1) (
 input 	  iData,iReset,iClock,
 output reg oQ);
 always @(posedge iClock)

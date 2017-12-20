@@ -6,7 +6,7 @@
 	Company	:	***********
 	code	:	Verilog-2001
 ************************/
-module #(parameter DELAY = 1) DFFAsync(
+module DFFAsync #(parameter DELAY = 1) (
 input 	  iData,iPreset,iClock,iReset,
 output reg oQ);
 always @(posedge iClock, negedge iPreset,negedge iReset)

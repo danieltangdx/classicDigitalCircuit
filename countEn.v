@@ -6,7 +6,7 @@
 	Company	:	***********
 	code	:	Verilog-2001
 ************************/
-module #(parameter WIDTH = 8, DELAY = 1) countEn(
+module countEn #(parameter WIDTH = 8, DELAY = 1) (
 input		iEnable,iClock,iReset,
 output reg	[WIDTH-1:0]	oA);
 always @(posedge iClock, negedge iReset)

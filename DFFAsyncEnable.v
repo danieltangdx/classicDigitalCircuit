@@ -7,12 +7,12 @@
 	Company	:	***********
 	code	:	Verilog-2001
 ************************/
-module #(parameter DELAY = 1) DFFAsyncEnable(
-input 	  iData,iClock,iReset,
+module DFFAsyncEnable #(parameter DELAY = 1) (
+input 	  iData,iClock,iReset,iEnable
 output reg oQ);
 always @(posedge iClock, negedge iReset)
 	if(~iReset)
 		oQ <= 1'b0;
-	else if(iPreset)
+	else if(iEnable)
 		oQ <= #DELAY iData;
 endmodule
