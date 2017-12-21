@@ -1,4 +1,6 @@
 # classicDigitalCircuit
+*2017/12/20*
+
 oneBitFullAdd.v 		one bit full adder
 
 muxFourtoOne.v		a multiplexer from four to one 
@@ -30,6 +32,10 @@ DFFSyncPreset.v		a rising edge flip-flop width sychronouse preset
 DFFAsyncEnable.v	a rising edge flip-flop width asychronouse preset and  clock enable
 
 
+
+*2017/12/21*
+
+To classify the circuit by combinational and sequential
 
 
 
