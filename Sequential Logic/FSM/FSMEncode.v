@@ -1,12 +1,17 @@
-/******************
-	FileName	:	FSMEncode.v
-	Author	:	daniel
-	Description	:	Example of a rising edge flip-flop width asychronouse preset and reset
-	Revision	:	2017/12/20
-	Company	:	***********
-	Code	:	Verilog-2001
-	Reference: CummingsSNUG1998SJ_FSM.pdf
-************************/
+/************************************************
+目的：摩尔类型有限状态机的二进制状态和输出方式
+
+环境：Verilog-2001
+
+范围：input      i1,i1,i2,i3,i4, 输入型号 1bit
+                 clk,rst, 时钟和复位信号 1bit
+      output     err,n_o1,o2,o3,o4 不同状态的输出 1bit 
+                
+      
+功能：两段式编码风格，输出在状态转移时输出，且输出与输入信号无关
+		
+日期：2017/12/27  
+************************************************/
 module FSMEncode(
 input      i1,i2,i3,i4,clk,rst,
 output reg err,n_o1,o2,o3,o4);
@@ -58,7 +63,7 @@ always @(state, i1,i2,i3,i4) begin
 	S3: begin
 									next = S3;
 			if(!i1)				next = IDLE;
-			if(i1 & i2)		next = ERROR;
+			if(i1 & i2)		   next = ERROR;
 			o4 = 1;
 			end
 			

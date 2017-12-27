@@ -39,5 +39,12 @@ To classify the circuit by combinational and sequential
 
 
 
+2017/12/22
+
+FSMEncode.v  FSM code stytle by enum code
 
 
+
+2017/12/27
+
+重新编写了文档的注释信息
